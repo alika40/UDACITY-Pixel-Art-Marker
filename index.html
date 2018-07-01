@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- This is the "CHALLENGE 2.0" from Udacity/Google for African Scholar Challenge 2018 titled "Lab: Pixel Art Marker".
+* The web designe is a responsive design using flex to implement it The design has Main container that has two sub-containers
+* that stack on top of each other at maximum width of 700px. @media query was deployed to achieve this.
+* And the columns also get rearranged at this breakpoint. Flex 'order' property is used for this.
+*It behooves me to also mention that is webpage is linked to "styles.css" and "designs.js" files and some APIs.
+-->
+<html>
+<head>
+    <!-- For responsive webpage and for metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <meta name="description"  content="Udacity Final Project for Google Africa Scholarship Challenge 2018: Pixel Art Marker">
+    <!-- Project title. And External links-->
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nosifer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eater">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- The header container -->
+        <div class="header">
+            <div class="site-logo">M</div>
+            <h1 class="site-name">MONSTER ART</h1>
+        </div>
+        
+        <!-- The Project title container -->
+        <div class="title-container">
+            <h1 class="title">Lab: Pixel Art Marker</h1>
+        </div>
+        
+        <!-- The flexible grid table and Tools containers -->
+        <div class="row">    
+           <!--Container for side for user interface -->
+            <div class="aside">
+                <div class="aside-div">
+                        <!-- Button to open the modal container -->
+                        <button id="modalOpen" class="instruction-btn" onclick="modalOpen(this);">Instructions</button>
+                        <!-- The Modal container. This is the begginning -->
+                        <div id="modalContainer" class="modal modal-animate">
+                            <span id="modalClose" onclick="modalClose(this);" class="modal-close" >&times;</span>
+                            <div class="modal-content-container">
+                                <ul>
+                                    <li>
+                                        <h3>Intro</h3>
+                                    </li>
+                                    <p>Pixel art marker is a web application that offers a user an opporyunity to express themselves through painting.</p>
+                                    <li>
+                                        <h3>Instructions On How To Paint</h3>
+                                        <ol>
+                                            <li>To create a grid, enter a number into the respective input fields for grids' width and height, and click on "Create Grid" button.</li>
+                                            <li>Click on the created grids to paint.</li>
+                                            <li>Click on the color panel "GRID COLOR" to pick colors from the displayed color palette to change current color.</li>
+                                            <li>Click on a grid to remove any existing applied color from the grid.</li>
+                                            <li>Click on the color "BACKGROUND COLOR" to apply desired background color to the canvas and it can always be changed. But do ensure you pick a color and click "OK" to get the effect.</li>
+                                            <li><span style="font-weight: bold; font-size: 1.25em;">NOTE: </span>The maximum number of grid rows and columns that can be created is 50, while minimum is 5.</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- This is the End of modal container -->
+                        
+                        <!--Form with inputs fields as well as 'submit' and 'clear grid' buttons -->
+                        <h2>Choose Grid Size</h2>
+                        <form id="sizePicker">
+                            <div class="posContainer1">
+                                <label for="grid-height">Grid Height</label><br>
+                                <input type="number" id="inputHeight" name="height" min="5" max="50" value="5"><br>
+                                <label for="grid-width">Grid Width</label><br>
+                                <input type="number" id="inputWidth" name="width" min="5" max="50" value="5">
+                            </div>
+                                <div class="posContainer2">
+                                <input type="submit" value="Create Grid">
+                                <input type="button" class="clear-btn" value="Clear Grid" id="clearGrids">
+                            </div>
+                        </form>
+                    <!--Color picker container having two input color palettes for canvas grid and background -->
+                    <div class="colorPicker" style="text-align: center;">
+                        <h2>Pick A Color</h2>
+                        <label for="colorPicker">Grid Color</label><br> <input type="color" id="colorPicker" value="#0ed0f0"><br>
+                        <label for="colorPalette">Background Color</label><br> <input type="color" value="#ff0000" id="colorPalette">
+                    </div>
+                    <div id="img-cont"><img src="google-logo.png" alt="Udacity | Google | Andela" id="logos" onclick="imageAlternate();"></div>
+                </div>
+            </div>
+
+            <!--Container for Tables -->
+            <div class="main">
+                <div class="canvas-container">
+                        <h2  id="spcial">Design Canvas</h2>
+                        <table id="pixelCanvas"></table>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+                        <script src="designs.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <!-- The footer container -->
+        <div class="footer">
+             <h4>&copy; <script> var myDate = new Date().getFullYear(); document.write( myDate); </script> All Right Reserved.</h4>   
+        </div>
+</body>
+</html>

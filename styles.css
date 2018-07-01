@@ -1,0 +1,458 @@
+/*This external stylesheet "styles.css" is linked to "index.html" file. The html file is about Udacity/Google for African Scholar Challenge 2018
+ *titled "Lab: Pixel Art Marker", which happend to be CHALLENGE 2.0 in the programme.
+*/
+
+
+/* The CSS property and its parameter is used to size containers to make them align properly without interference from paddings and margins.*/
+* {
+    box-sizing: border-box;
+}
+/* Styling for normalization of the page to prevent default behaviours */
+html,body {
+    padding: 0;
+    margin:0;
+    font-size: 100%;
+    min-height: 100%;
+    background: #b5fefa;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+}
+
+/* The Parent container using flex to implement a responsive web design that has two sub-containers
+* that stack on top of each other at maximum width of 700px. @media query is deployed to achieve this.
+* And the columns also get rearranged at this breakpoint. Flex 'order' property is used for this.
+*/
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/* Create two unequal columns that sits next to each other */
+/* Main column */
+.main {
+    flex: 3;
+    height: auto;
+    background: #b5fefa;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* left column container with its inner containers and elements */
+.aside {
+    flex: 1;
+    height: auto;
+    background: #b5fefa;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+/* left column container: Inner container*/
+.aside-div {
+    height: auto;
+    background: #114050;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 10px #000;
+}
+/* left column container: Alternating images' container and the images styling below it*/
+#img-cont {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logos {
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+}
+/* left column container: Site header*/
+.header {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #114959;
+    border-bottom: 1px solid #000;
+}
+/* left column container: Logo for Site header*/
+.site-logo {
+    text-align: center;
+    font-size: 250%;
+    padding-bottom: 10px;
+    margin: 10px 0 14px 15px;
+    width: 50px;
+    height: 55px;
+    color:#fff;
+    border: 3px solid red;
+    text-shadow: -2px 0 #c00, 0 2px #c00, 2px 0 #c00, 0 -2px #c00;
+}
+/* left column container: Site name in the header*/
+.site-name {
+    font-family: Eater;
+    color: red;
+    text-align: center;
+    font-size: 160%;
+    margin-top: -60px;
+    text-shadow: -1px 0 #c00, 0 1px #c00, 1px 0 #c00, 0 -1px #c00;
+    font-family:cursive;
+}
+
+
+
+
+
+/* Upper container for Project Name or Title and its element */
+.title-container {
+    margin-top: 70px;
+    padding: 5px;
+    background-image: linear-gradient(to top, #b5fefa, #0ed0f0);
+}
+/* Upper container for Project Name or Title: Project Title */
+.title {
+    font-family: Nosifer;/*Faster One, Fredericka the Great, Frijole, Trade Winds,Nosifer, Rye, etc.*/
+    text-align: center;
+    font-size: 70px;
+    margin: 3px;
+    text-shadow: 3px 3px 1px #c00;
+    word-spacing: 10px;
+    animation: text-colors 2.5s infinite;
+}
+/* Upper container for Project Name or Title: Project Title Animation */
+@keyframes text-colors {
+    from {color: #000;}
+    to {color: #00c;}
+}
+
+
+
+
+
+/* The styling of elements in the aside and main containers */
+h2:last-of-type {
+    margin: 11px 0 8px;
+    font-size: 140%;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    color: #c00;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2:last-of-type::first-letter {
+    font-size: 140%;
+    font-family: Eater;
+}
+#spcial {
+    color: #c00;
+    margin: 10px;
+    font-size: 180%;
+}
+h2:first-of-type {
+    margin-top: 4px;
+    color: #ccc;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+label {
+    font-weight: bold;
+}
+#colorPicker {
+    margin-top: 10px;
+}
+#colorPalette {
+    margin-top: 10px;
+}
+
+
+
+
+/* The styling of main container: Canvas container */
+.canvas-container {
+    background-image: radial-gradient(#eee, #999);
+    width: 98%;
+    height: 100%;
+    margin-right: 15px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 0 5px 5px 0;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 0 8px #000;
+    border: 2px solid #000;
+    background: #fff;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+
+
+
+/* The styling of aside container with its inner divs containing inputs and other elements */
+.posContainer1 {
+    padding: 8px 0 8px 0;
+    border-radius: 5px;
+    text-align: center;
+    background: #394959;
+    box-shadow: 0 0 6px #000;
+}
+.posContainer2 {
+    text-align: center;
+    width: 80%;
+    padding: 8px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #394959;
+    box-shadow: 0 0 6px #000;
+    border-radius: 3px;
+}
+#inputHeight {
+    margin-bottom: 20px;
+}
+input[type=number] {
+    width: 160px;
+    margin: 5px;
+    padding: 8px;
+    background: #394959;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #2c3c49;
+    box-shadow: 0 0 3px #000;
+}
+input[type=number]:focus {
+    background: powderblue;
+    border: 2px solid #000;
+    color: #000;
+}
+input[type=color] {
+    width: 120px;
+    height: 50px;
+    background-image: linear-gradient(to bottom right, #777, #ddd);
+    border-radius: 4px;
+    border: 2px solid #000;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+input[type=submit] { 
+    line-height: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right,  #999, #eee);
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    box-shadow: 2px 2px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right, #777, #ddd);
+}
+.clear-btn {
+    margin-left: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right, #999, #eee);
+    cursor: pointer;
+}
+.clear-btn:hover {
+    box-shadow: 2px 2px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right, #777, #ddd);
+}
+/*Instruction button for modal*/
+.instruction-btn {
+    margin: 15px 0 5px 0;
+    line-height: 25px;
+    font-weight: bold;
+    background: #394959;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 6px #000;
+}
+/*Instruction button on hover for modal*/
+.instruction-btn:hover {
+    box-shadow: 0 0 2px #000;
+    background: #394950;
+    border: none;
+    border-radius: 2px;
+    color: #f2f2f2;
+}
+
+
+
+
+/* The styling of Aside Container: Modal container and its contents */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 70px;
+    width: 55%;
+    height: 100%;
+    background: #114959;
+    padding-top: 40px;
+    overflow: auto;
+    border-radius: 0 0 8px 0;
+}
+/* The inner container for modal content */
+.modal-content-container {
+    background: #394959;
+    margin: 15px auto;
+    width: 95%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+}
+/* The Close Button for modal */
+.modal-close {
+    position: absolute;
+    right: 25px;
+    top: 0; 
+    color: #c00;
+    font-size: 3em;
+    font-weight: bold;
+}
+/* Close button on hover for modal */
+.modal-close:hover,
+.modal-close:focus {
+    color: cyan;
+    cursor: pointer;
+}
+/* Add Zoom Animation for modal */
+.modal-animate {
+    animation: zoomanimation .5s;
+}
+@keyframes zoomanimation {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+.modal-content-container ol {
+    background-image: linear-gradient(to top, #b5fefa, #0ed0f0);
+    color: #000;
+    margin-left: -10px;
+    border-radius: 4px;
+    
+    font-family: cursive;
+}
+.modal-content-container p {
+    background-image: linear-gradient(to top, #b5fefa, #0ed0f0);
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+    border-radius: 2px;
+    font-family: cursive;
+}
+
+
+
+
+/* The stylin of the footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    background: #114959;
+}
+
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+
+    .title {
+        font-family: Eater;/*Faster One, Fredericka the Great, Frijole, Trade Winds,Nosifer, Rye, etc.*/
+        text-align: center;
+        font-size: 58px;
+        margin: 3px;
+        word-spacing: 7px;
+    }
+    
+    h2:last-of-type::first-letter {
+        font-size: 100%;
+        font-family: Eater;
+    }
+    
+    .site-logo {
+        font-size: 200%;
+        margin-top: 12px;
+        width: 50px;
+        height: 50px;
+        color:#fff;
+    
+    }
+
+    .site-name {
+        font-size: 130%;
+        margin-top: -40px;
+    }
+
+    .instruction-btn {
+        line-height: 20px;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .modal {
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+    }
+    .posContainer2 {
+        width: 60%;
+    }
+    .modal-close {
+        font-size: 3rem;
+        padding-bottom: 15px;
+    }
+    .aside {
+        flex: 1 0 auto;
+        order: 1;
+        background: #b5fefa;
+    }
+    #img-cont {
+        width: 50%;
+        height: 50%;
+    }
+    .aside-div {
+        margin: -10px 15px 0 0;
+        border-radius: 5px;
+    }
+    .canvas-container {
+        margin: 20px auto 0 auto;
+    }
+    .main {
+        flex: 1 0 auto;
+        order: 0;
+        background: #b5fefa;
+     }
+}
