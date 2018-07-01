@@ -1,5 +1,6 @@
 # UDACITY: Pixel-Art-Marker
 This is "CHALLENGE 2.0" from Udacity on Google for African Scholar Challenge 2018 titled "Lab: Pixel Art Marker".
+And You can check out the application on this link: https://alika40.github.io/UDACITY-Pixel-Art-Marker/
 
 # INTRO:
 Pixel art marker is a web application that offers a user an opporyunity to express themselves through painting.
